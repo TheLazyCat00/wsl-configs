@@ -19,3 +19,6 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 . "$HOME/.bashrc"
+
+# Created by `pipx` on 2026-01-10 20:07:21
+export PATH="$PATH:/home/manuel/.local/bin"

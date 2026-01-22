@@ -70,3 +70,5 @@ if ! shopt -oq posix; then
 fi
 
 eval "$(oh-my-posh init bash --config amro)"
+export QT_XCB_FORCE_SOFTWARE_OPENGL=1
+export QT_QPA_PLATFORM=wayland
