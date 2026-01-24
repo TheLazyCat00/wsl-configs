@@ -72,3 +72,5 @@ fi
 eval "$(oh-my-posh init bash --config amro)"
 export QT_XCB_FORCE_SOFTWARE_OPENGL=1
 export QT_QPA_PLATFORM=wayland
+export VCPKG_ROOT=~/vcpkg
+export PATH=$VCPKG_ROOT:$PATH
