@@ -3,6 +3,7 @@
 # for examples
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export PATH="$PATH:/home/manuel/.local/bin"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
