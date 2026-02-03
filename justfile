@@ -5,11 +5,11 @@ push:
 	brew bundle dump --force --file="$(chezmoi source-path)/Brewfile"
 	
 	@for file in $(chezmoi state data | jq -r '.entryState | keys[]'); do \
-		if [ -e $file ]; then \
-			chezmoi add $file; \
+		if [ -e "$file" ]; then \
+			chezmoi add "$file"; \
 		else \
-			echo Removing orphaned state for: $file; \
-			chezmoi state delete --bucket=entryState --key=$file || true; \
+			echo "Removing orphaned state for: $file"; \
+			chezmoi state delete --bucket=entryState --key="$file" || true; \
 		fi; \
 	done
 
