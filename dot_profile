@@ -19,3 +19,18 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 . "$HOME/.bashrc"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/manuel/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/manuel/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<

@@ -70,8 +70,25 @@ if ! shopt -oq posix; then
   fi
 fi
 
-eval "$(oh-my-posh init bash --config amro)"
 export QT_XCB_FORCE_SOFTWARE_OPENGL=1
 export QT_QPA_PLATFORM=wayland
 export VCPKG_ROOT=~/vcpkg
 export PATH=$VCPKG_ROOT:$PATH
+
+eval "$(oh-my-posh init bash --config amro)"
+eval "$(direnv hook bash)"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/manuel/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/manuel/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
