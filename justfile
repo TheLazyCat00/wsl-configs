@@ -5,7 +5,6 @@ push:
 	brew bundle dump --force --file="$(chezmoi source-path)/Brewfile"
 	
 	@for file in $(chezmoi state data | jq -r '.entryState | keys[]'); do \
-		echo $file; \
 		if [ -e $file ]; then \
 			chezmoi add $file; \
 		else \
