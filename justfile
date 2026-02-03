@@ -1,4 +1,5 @@
 push:
+	chezmoi git -- rm --cache . -r
 	chezmoi re-add
 	chezmoi git add .
 	chezmoi git -- commit -m"update"
