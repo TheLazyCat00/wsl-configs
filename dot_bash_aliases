@@ -18,4 +18,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias cdf='cd "$(fd -I --type d --max-depth 4 | fzf)"'
-alias julia='julia --project=.'
+alias julia="julia --project=."
+
+kali() {
+	if [ "$#" -eq 0 ]; then
+		exec wsl.exe -d kali-linux bash -c "exec bash"
+	else
+		exec wsl.exe -d kali-linux bash -c "$(printf '%q ' "$@"); exec bash"
+	fi
+}
+alias pwsh="exec pwsh.exe"
