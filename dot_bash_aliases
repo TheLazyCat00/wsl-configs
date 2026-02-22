@@ -19,6 +19,7 @@ fi
 
 alias cdf='cd "$(fd -I --type d --max-depth 4 | fzf)"'
 alias julia="julia --project=."
+alias python="python3"
 
 kali() {
 	if [ "$#" -eq 0 ]; then
