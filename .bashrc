@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -14,7 +16,6 @@ case $- in
       *);;
 esac
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export QT_XCB_FORCE_SOFTWARE_OPENGL=1
 export QT_QPA_PLATFORM=wayland
 export VCPKG_ROOT=~/vcpkg
