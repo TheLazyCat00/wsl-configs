@@ -54,3 +54,4 @@ if ! shopt -oq posix; then
 fi
 
 eval "$(oh-my-posh init bash --config amro)"
+eval "$(direnv hook bash)"
