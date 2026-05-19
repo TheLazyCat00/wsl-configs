@@ -61,3 +61,5 @@ export HISTSIZE=100000
 export HISTFILESIZE=200000
 shopt -s histappend
 checkpoint() { history -a; history -n; command checkpoint "$@"; }
+
+[ -f "$HOME/.config/secrets/mistral.env" ] && source "$HOME/.config/secrets/mistral.env"
